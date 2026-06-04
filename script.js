@@ -19,7 +19,13 @@ noBtn.addEventListener("mouseover", () => {
 yesBtn.addEventListener("click", () => {
   questionContainer.style.display = "none";
   heartLoader.style.display = "inherit";
+const hearts = document.querySelectorAll(".hearts-bg span");
 
+hearts.forEach((heart) => {
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = 5 + Math.random() * 5 + "s";
+  heart.style.fontSize = 16 + Math.random() * 30 + "px";
+});
   const timeoutId = setTimeout(() => {
     heartLoader.style.display = "none";
     resultContainer.style.display = "inherit";
