@@ -21,13 +21,8 @@ body {
   -moz-transform: translate(-100%, -50%);
   transition: 0.2s;
 }
+  
 
-.question-container {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transition: 0.2s;
-}
 .local-gif {
   width: 100%;
   max-width: 300px;
