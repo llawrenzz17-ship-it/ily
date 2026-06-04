@@ -157,7 +157,24 @@ body {
   -webkit-transform: translate(-28px, -27px);
   -moz-transform: translate(-28px, -27px);
 }
+.hearts-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
 
+.hearts-bg span {
+  position: absolute;
+  bottom: -50px;
+  font-size: 24px;
+  animation: floatUp 8s linear infinite;
+  opacity: 0.7;
+}
 .cssload-heartR {
   width: 1em;
   height: 1em;
@@ -259,7 +276,19 @@ body {
     -ms-transform: scale(1) rotate(-45deg);
   }
 }
-
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.5);
+    opacity: 0;
+  }
+}
 @-webkit-keyframes cssload-square {
   50% {
     border-radius: 100%;
